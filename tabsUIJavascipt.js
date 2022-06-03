@@ -6,7 +6,7 @@ var items_content = document.querySelectorAll('.item');
 const lineActive =  document.querySelector('.tab_item.active');
 const line = document.querySelector('.tab .line');
 
-console.log([lineActive]);
+// console.log([lineActive]);
 
 var calcLine = function(lineActive){
     line.style.left = lineActive.offsetLeft + 'px';
