@@ -14,94 +14,99 @@
 
 <body>
     <!-- <h1 class="tabsUI_Practice">PracticeJS - TabsUI</h1> -->
-    <div class="container-menu">
+    <div class="box">
+        <div class="container-menu">
 
-        <ul>
-            <li style="--i:5"> <a href="#">Home</a></li>
-            <li style="--i:4"> <a href="#">About</a></li>
-            <li style="--i:3"> <a href="#">Contact</a></li>
-            <li style="--i:2"> <a href="#">Course</a></li>
-            <li style="--i:1"> <a href="#">Services</a></li>
-        </ul>
+            <ul>
+                <li style="--i:5"> <a href="#">Home</a></li>
+                <li style="--i:4"> <a href="#">About</a></li>
+                <li style="--i:3"> <a href="#">Contact</a></li>
+                <li style="--i:2"> <a href="#">Course</a></li>
+                <li style="--i:1"> <a href="#">Services</a></li>
+            </ul>
 
-    </div>
-    <div class="container-content">
+        </div>
+        <div class="container-content">
 
-        <!-- Tab UI -->
-        <div class="container_tabUI">
-            <!-- Tabs Items -->
+            <!-- Tab UI -->
+            <div class="container_tabUI">
+                <!-- Tabs Items -->
 
-            <div class="container_tab">
-                <div class="tab">
-                    <div class="tab_item active">
-                        <i class="fa-brands fa-react"></i>
-                        React
+                <div class="container_tab">
+                    <div class="tab">
+                        <div class="tab_item active">
+                            <i class="fa-brands fa-react"></i>
+                            React
+                        </div>
+                        <div class="tab_item">
+                            <i class="fa-brands fa-angular"></i>
+                            Angular
+                        </div>
+                        <div class="tab_item">
+                            <i class="fa-solid fa-circle-plus"></i>
+                            Ember
+                        </div>
+                        <div class="tab_item">
+                            <i class="fa-brands fa-vuejs"></i>
+                            Vue.JS
+                        </div>
+                        <div class="line"></div>
                     </div>
-                    <div class="tab_item">
-                        <i class="fa-brands fa-angular"></i>
-                        Angular
-                    </div>
-                    <div class="tab_item">
-                        <i class="fa-solid fa-circle-plus"></i>
-                        Ember
-                    </div>
-                    <div class="tab_item">
-                        <i class="fa-brands fa-vuejs"></i>
-                        Vue.JS
-                    </div>
-                    <div class="line"></div>
+                </div>
+
+                <!-- Tab Content -->
+                <div class="item active">
+                    <div class="item_title">React</div>
+                    <div class="item_content">Automate Processes Without a Developer. Workflow Automation for Large and
+                        Small
+                        Teams. Connect Your Apps Without Writing Code. More than 3,000 Apps. No Coding Required.</div>
+                </div>
+                <div class="item">
+                    <div class="item_title">Angular</div>
+                    <div class="item_content">Angular is a platform and framework for building single-page client
+                        applications
+                        using HTML and TypeScript. Angular is written in TypeScript. It implements core and optional
+                        functionality as a set of TypeScript libraries that you import into your applications.</div>
+                </div>
+                <div class="item">
+                    <div class="item_title">Ember</div>
+                    <div class="item_content">An ember, also called a hot coal, is a hot lump of slowly burning solid
+                        fuel,
+                        typically glowing, composed of greatly heated wood, coal, .</div>
+                </div>
+                <div class="item">
+                    <div class="item_title">Vue.JS</div>
+                    <div class="item_content">VueJS is an open source progressive JavaScript framework used to develop
+                        interactive web interfaces. It is one of the famous frameworks used to simplify web development.
+                        VueJS
+                        focusses on the view layer. It can be easily integrated into big projects for front-end
+                        development
+                        without any issues.</div>
                 </div>
             </div>
 
-            <!-- Tab Content -->
-            <div class="item active">
-                <div class="item_title">React</div>
-                <div class="item_content">Automate Processes Without a Developer. Workflow Automation for Large and
-                    Small
-                    Teams. Connect Your Apps Without Writing Code. More than 3,000 Apps. No Coding Required.</div>
+            <!-- Toast -->
+            <div class="btn-control-toast">
+                <div class="btn btn-succses">
+                    Success
+                </div>
+                <div class="btn btn-info">
+                    Info
+                </div>
+                <div class="btn btn-warning">
+                    Warning
+                </div>
+                <div class="btn btn-error">
+                    Error
+                </div>
             </div>
-            <div class="item">
-                <div class="item_title">Angular</div>
-                <div class="item_content">Angular is a platform and framework for building single-page client
-                    applications
-                    using HTML and TypeScript. Angular is written in TypeScript. It implements core and optional
-                    functionality as a set of TypeScript libraries that you import into your applications.</div>
-            </div>
-            <div class="item">
-                <div class="item_title">Ember</div>
-                <div class="item_content">An ember, also called a hot coal, is a hot lump of slowly burning solid fuel,
-                    typically glowing, composed of greatly heated wood, coal, .</div>
-            </div>
-            <div class="item">
-                <div class="item_title">Vue.JS</div>
-                <div class="item_content">VueJS is an open source progressive JavaScript framework used to develop
-                    interactive web interfaces. It is one of the famous frameworks used to simplify web development.
-                    VueJS
-                    focusses on the view layer. It can be easily integrated into big projects for front-end development
-                    without any issues.</div>
-            </div>
-        </div>
 
-        <!-- Toast -->
-        <div class="btn-control-toast">
-            <div class="btn btn-succses">
-                Success
-            </div>
-            <div class="btn btn-info">
-                Info
-            </div>
-            <div class="btn btn-warning">
-                Warning
-            </div>
-            <div class="btn btn-error">
-                Error
-            </div>
-        </div>
+            <div class="toast-container">
 
-        <div class="toast-container">
-
+            </div>
         </div>
     </div>
+
     <script src="./tabsUIJavascipt.js"></script>
     <script src="./toastMessage.js"></script>
     <script>
