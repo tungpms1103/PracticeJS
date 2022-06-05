@@ -3,10 +3,16 @@
     margin: 0px;
     box-sizing: border-box;
 }
-.container{
+
+body{
+    display: flex;
+}
+.container-content{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 75%;
+    height: 100%;
 }
 .tabsUI_Practice {
     color: red;
@@ -82,6 +88,11 @@
     opacity: 1;
 }
 
+.item{
+    margin: auto;
+    max-width: 80%;
+    min-height: 150px;
+}
 .item.active{
     display: block;
 }

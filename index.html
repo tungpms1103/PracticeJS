@@ -8,13 +8,25 @@
     <link rel="stylesheet" href="./CSS/tabsUI.css">
     <link rel="stylesheet" href="./CSS/toast.css">
     <link rel="stylesheet" href="./Asset/fonts/fontawesome-free-6.1.1-web/css/all.min.css">
+    <link rel="stylesheet" href="./CSS/menu.css">
     <title>PracticeJS</title>
 </head>
 
 <body>
-    <h1 class="tabsUI_Practice">PracticeJS - TabsUI</h1>
+    <!-- <h1 class="tabsUI_Practice">PracticeJS - TabsUI</h1> -->
+    <div class="container-menu">
 
-    <div class="container">
+        <ul>
+            <li style="--i:5"> <a href="#">Home</a></li>
+            <li style="--i:4"> <a href="#">About</a></li>
+            <li style="--i:3"> <a href="#">Contact</a></li>
+            <li style="--i:2"> <a href="#">Course</a></li>
+            <li style="--i:1"> <a href="#">Services</a></li>
+        </ul>
+
+    </div>
+    <div class="container-content">
+
         <!-- Tab UI -->
         <div class="container_tabUI">
             <!-- Tabs Items -->
@@ -78,8 +90,6 @@
             <div class="btn btn-info">
                 Info
             </div>
-        </div>
-        <div class="btn-control-toast">
             <div class="btn btn-warning">
                 Warning
             </div>
@@ -91,8 +101,6 @@
         <div class="toast-container">
 
         </div>
-
-
     </div>
     <script src="./tabsUIJavascipt.js"></script>
     <script src="./toastMessage.js"></script>

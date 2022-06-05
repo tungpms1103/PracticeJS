@@ -10,9 +10,13 @@ body {
     user-select: none;
   }
 
+
 .btn-control-toast{
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
+
 .btn{
     width: 230px;
     height: 50px;
@@ -26,13 +30,13 @@ body {
 /* .btn:hover{
     transform: scale(1.5);
 } */
-.btn + .btn{
-    margin-left: 35px;
-}
+
 .btn:active{
     opacity: 0.7;
 }
-
+.btn + .btn {
+    margin-left: 20px;
+}
 .btn-succses{
     background-color: green;
 }
