@@ -1,0 +1,108 @@
+.list-course{
+    width: 95%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.list-course .course{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width:28%;
+    height: 280px;
+    margin-left: calc(16%/6);
+    margin-right: calc(16%/6);
+    transition: all 0.2s linear;
+    margin-top: 20px;
+
+}
+.list-course .course .wrapper{
+    width: 100%;
+    height: 180px;
+    background-color: antiquewhite;
+    position: relative;
+    border-radius: 15px;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.course .wrapper h2{
+    text-transform: capitalize;
+    text-align: center;
+    line-height: 180px;
+    color: aliceblue;
+}
+.course .wrapper .blur-course{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    border-radius: 15px;
+    opacity: 0.5;
+    background-color: rgb(60, 65, 70);
+    display: none;
+}
+.course .wrapper .btn-learn{
+    position: absolute;
+    left: 50%;
+    top: 50%;   
+    transform: translate(-50%,150%);
+    width: 140px;
+    height: 40px;
+    background-color: aqua;
+    border-radius: 40px;
+    transition: all .3s linear;
+    opacity: 0;
+
+}
+
+.wrapper:hover .btn-learn{
+    transform: translate(-50%,-50%) ;
+    opacity: 1;
+    z-index: 9999;
+
+}
+.wrapper .btn-learn:active{
+    opacity: 0.5;
+}
+.wrapper:hover .blur-course{
+    display: block;
+    z-index: 999;
+}
+
+
+/* Description */
+.course .description{
+    padding: 15px 0 0 5px;
+    text-transform: capitalize;
+}
+.course .description h2{
+    padding-bottom: 5px;
+    color: rgb(16, 15, 15);
+    font-size: 20px;
+    font-weight: 800;
+}
+.course .description{
+    font-size: 18px;
+    font-weight: 500;
+    opacity: .8;
+}
+.course .done p span, .course .done p i {
+    color: green;
+}
+.course .waiting p span, .course .waiting p i {
+    color: rgb(0, 55, 255);
+}
+
+.course .description i {
+    display: none;
+}
+.course .done .status-done{
+    display: inline-block;
+}
+.course .waiting .status-waiting{
+    display: inline-block;
+}

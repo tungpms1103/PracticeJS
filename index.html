@@ -8,28 +8,71 @@
     <link rel="stylesheet" href="./CSS/tabsUI.css">
     <link rel="stylesheet" href="./CSS/toast.css">
     <link rel="stylesheet" href="./Asset/fonts/fontawesome-free-6.1.1-web/css/all.min.css">
-    <link rel="stylesheet" href="./CSS/menu.css">
+    <!-- <link rel="stylesheet" href="./CSS/menu.css"> -->
+    <link rel="stylesheet" href="./CSS/listItem.css">
+    <link rel="stylesheet" href="./CSS/register.css">
+    <link rel="stylesheet" href="./CSS/header.css">
     <title>PracticeJS</title>
 </head>
 
 <body>
     <!-- <h1 class="tabsUI_Practice">PracticeJS - TabsUI</h1> -->
-    <div class="box">
-        <div class="container-menu">
+    <div class="box" id="home">
+        <!-- <div class="container-menu">
 
-            <ul>
-                <li style="--i:5"> <a href="#">Home</a></li>
-                <li style="--i:4"> <a href="#">About</a></li>
-                <li style="--i:3"> <a href="#">Contact</a></li>
-                <li style="--i:2"> <a href="#">Course</a></li>
-                <li style="--i:1"> <a href="#">Services</a></li>
-            </ul>
+            <div class="menu-logo">
+                <div class="logo">
+                    <div class="face font"></div>
+                    <div class="face back"></div>
+                    <div class="face left"></div>
+                    <div class="face right"></div>
+                    <div class="face top"></div>
+                    <div class="face bottom"></div>
+                </div>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li style="--i:5"> <a href="#">Home</a></li>
+                    <li style="--i:4"> <a href="#">About</a></li>
+                    <li style="--i:3"> <a href="#">Contact</a></li>
+                    <li style="--i:2"> <a href="#">Course</a></li>
+                    <li style="--i:1"> <a href="#">Services</a></li>
+                </ul>
 
+            </div>
+
+        </div> -->
+        <div class="header">
+            <div class="nav-bar">
+                <div class="menu-logo">
+                    <div class="logo">
+                        <div class="face font"></div>
+                        <div class="face back"></div>
+                        <div class="face left"></div>
+                        <div class="face right"></div>
+                        <div class="face top"></div>
+                        <div class="face bottom"></div>
+                    </div>
+                </div>
+                <ul>
+                    <li> <a href="#home">Home</a></li>
+                    <li> <a href="#about">About</a></li>
+                    <li> <a href="#">Contact</a></li>
+                    <li> <a href="#list-course">Course</a></li>
+                </ul>
+                <div class="btn-register">
+                    Register
+                </div>
+            </div>
+            <div class="banner">
+                <img src="./Asset/image/banner.jpg" alt="Banner" title="Banner">
+            </div>
         </div>
+
         <div class="container-content">
 
             <!-- Tab UI -->
-            <div class="container_tabUI">
+            <div class="container_tabUI" id="about">
                 <!-- Tabs Items -->
 
                 <div class="container_tab">
@@ -57,9 +100,11 @@
                 <!-- Tab Content -->
                 <div class="item active">
                     <div class="item_title">React</div>
-                    <div class="item_content">Automate Processes Without a Developer. Workflow Automation for Large and
-                        Small
-                        Teams. Connect Your Apps Without Writing Code. More than 3,000 Apps. No Coding Required.</div>
+                    <div class="item_content">React (also known as React.js or ReactJS) is a free and open-source
+                        front-end JavaScript library for building user interfaces based on UI components. It is
+                        maintained by Meta (formerly Facebook) and a community of individual developers and
+                        companies.React can be used as a base in the development of single-page, mobile, or
+                        server-rendered applications with frameworks like Next.js</div>
                 </div>
                 <div class="item">
                     <div class="item_title">Angular</div>
@@ -70,10 +115,12 @@
                 </div>
                 <div class="item">
                     <div class="item_title">Ember</div>
-                    <div class="item_content">An ember, also called a hot coal, is a hot lump of slowly burning solid
-                        fuel,
-                        typically glowing, composed of greatly heated wood, coal, .</div>
+                    <div class="item_content">Ember.js is a productive, battle-tested JavaScript framework for building
+                        modern web applications. It includes everything you need to build rich UIs that work on any
+                        device.It includes everything you need to build rich UIs that work on any
+                        device</div>
                 </div>
+
                 <div class="item">
                     <div class="item_title">Vue.JS</div>
                     <div class="item_content">VueJS is an open source progressive JavaScript framework used to develop
@@ -86,7 +133,7 @@
             </div>
 
             <!-- Toast -->
-            <div class="btn-control-toast">
+            <!-- <div class="btn-control-toast">
                 <div class="btn btn-succses">
                     Success
                 </div>
@@ -103,55 +150,196 @@
 
             <div class="toast-container">
 
+            </div> -->
+
+            <!-- Load list Courses -->
+            <div class="list-course" id="list-course">
+
+            </div>
+
+            <!-- Register -->
+
+            <div class="register-blur"></div>
+            <div class="register_container">
+                <div class="form-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <form action="" method="post" class="form" id="form-register">
+
+                    <h2 class="heading">Register</h2>
+
+                    <div class="form-group">
+                        <label for="fullname" class="form-label">FullName</label>
+                        <div class="input-form">
+                            <input id="fullname" class="form-control" name="fullname" type="text"
+                                placeholder="Ex: Nguyễn Văn A">
+                            <i class="fa-solid fa-circle-check form-check"></i>
+                        </div>
+                        <span class="form-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email</label>
+                        <div class="input-form">
+                            <input id="email" class="form-control" name="email" type="text"
+                                placeholder="Ex: tungpmshe130687@gmail.com">
+                            <i class="fa-solid fa-circle-check form-check"></i>
+                        </div>
+                        <span class="form-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phonenumber" class="form-label">PhoneNumber</label>
+                        <div class="input-form">
+                            <input id="phonenumber" class="form-control" name="phonenumber" type="text"
+                                placeholder="Ex: 0388828774">
+                            <i class="fa-solid fa-circle-check form-check"></i>
+                        </div>
+                        <span class="form-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="gender" class="form-label">Gender</label>
+                        <div class="input-form">
+                            <div class="gender-box">
+                                <input class="form-gender" name="gender" type="radio" value="male">Male
+                            </div>
+                            <div class="gender-box">
+                                <input class="form-gender" name="gender" type="radio" value="female">Female
+                            </div>
+                            <div class="gender-box">
+                                <input class="form-gender" name="gender" type="radio" value="other">Other
+                            </div>
+                            <i class="fa-solid fa-circle-check form-check"></i>
+                        </div>
+                        <span class="form-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password" class="form-label">PassWord</label>
+                        <div class="input-form">
+                            <input id="password" class="form-control" name="password" type="password"
+                                placeholder="Ex: Enter Password">
+                            <i class="fa-solid fa-circle-check form-check"></i>
+                        </div>
+                        <span class="form-message"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="repassword" class="form-label">Re-PassWord</label>
+                        <div class="input-form">
+                            <input id="repassword" class="form-control" name="repassword" type="password"
+                                placeholder="Ex: Enter again Password">
+                            <i class="fa-solid fa-circle-check form-check"></i>
+                        </div>
+                        <span class="form-message"></span>
+                    </div>
+
+                    <button class="form-submit">Register</button>
+                </form>
+
+
             </div>
         </div>
+
+
+    </div>
+
     </div>
 
     <script src="./tabsUIJavascipt.js"></script>
     <script src="./toastMessage.js"></script>
+    <script src="./listItem.js"></script>
+    <script src="./register.js"></script>
     <script>
-        const btn_success = document.querySelector('.btn-succses');
-        const btn_info = document.querySelector('.btn-info');
-        const btn_warning = document.querySelector('.btn-warning');
-        const btn_error = document.querySelector('.btn-error');
+        // const btn_success = document.querySelector('.btn-succses');
+        // const btn_info = document.querySelector('.btn-info');
+        // const btn_warning = document.querySelector('.btn-warning');
+        // const btn_error = document.querySelector('.btn-error');
+        // const btn_learn = document.querySelector('.btn-learn');
 
 
+        // btn_learn.onclick = function (e) {
+        //     console.log(e.target);
+        // }
 
-        btn_success.onclick = function () {
-            toast({
-                title: 'Success',
-                message: 'in a way that achieves the results wanted or hoped for: A number of patients have been successfully treated with the new drug',
-                type: 'success',
-                duration: 4000
-            })
+
+        // btn_success.onclick = function () {
+        //     toast({
+        //         title: 'Success',
+        //         message: 'in a way that achieves the results wanted or hoped for: A number of patients have been successfully treated with the new drug',
+        //         type: 'success',
+        //         duration: 4000
+        //     })
+        // }
+
+        // btn_info.onclick = function () {
+        //     toast({
+        //         title: 'Info',
+        //         message: 'An infographic is an image that conveys complex information graphically. An "Infomation" is an animated infographic',
+        //         type: 'info',
+        //         duration: 4000
+        //     })
+        // }
+
+        // btn_warning.onclick = function () {
+        //     toast({
+        //         title: 'Warning',
+        //         message: 'Directed by Agata Alexander. With Thomas Jane, Tomasz Kot, Toni Garrn, Rupert Everett. ',
+        //         type: 'warning',
+        //         duration: 4000
+        //     })
+        // }
+
+        // btn_error.onclick = function () {
+        //     toast({
+        //         title: 'Error',
+        //         message: 'An \'error\' is a deviation from accuracy or correctness.',
+        //         type: 'error',
+        //         duration: 4000
+        //     })
+        // }
+
+        const registerBtn = document.querySelector('.nav-bar .btn-register');
+        const registerBlur = document.querySelector('.container-content .register-blur');
+        const registerElement = document.querySelector('.container-content .register_container');
+        const formCloseBtn = document.querySelector('.register_container .form-close');
+        console.log(formCloseBtn);
+
+        registerBtn.onclick = function () {
+            registerBlur.classList.add('active');
+            registerElement.classList.add('active');
+        }
+        formCloseBtn.onclick = function () {
+            registerBlur.classList.remove('active');
+            registerElement.classList.remove('active');
         }
 
-        btn_info.onclick = function () {
-            toast({
-                title: 'Info',
-                message: 'An infographic is an image that conveys complex information graphically. An "Infomation" is an animated infographic',
-                type: 'info',
-                duration: 4000
-            })
-        }
 
-        btn_warning.onclick = function () {
-            toast({
-                title: 'Warning',
-                message: 'Directed by Agata Alexander. With Thomas Jane, Tomasz Kot, Toni Garrn, Rupert Everett. ',
-                type: 'warning',
-                duration: 4000
-            })
-        }
+        validator({
+            form: '#form-register',
+            formGroup: '.form-group',
+            message: '.form-message',
+            rules: [
+                validator.isRequired('#fullname', 'Not empty'),
+                validator.isRequired('#email', 'Not empty'),
+                validator.isEmail('#email', 'Please enter your email'),
+                validator.isRequired('#phonenumber', 'Not empty'),
+                validator.isRequired('input[name="gender"]', 'Not empty'),
+                validator.isPhonenumber('#phonenumber', 'Please enter your phonenumber'),
+                validator.isRequired('#password', 'Not empty'),
+                validator.isLengthMin('#password', 5, 'Password must greater 5 characters'),
+                validator.isRequired('#repassword', 'Not empty'),
+                validator.isConfirmed('#repassword', function () {
+                    return document.querySelector('#form-register #password').value;
+                }, 'Re-password incorrect')
+            ],
+            onSubmit: function (data) {
+                // Call API
+                console.log(data);
+            }
+        });
 
-        btn_error.onclick = function () {
-            toast({
-                title: 'Error',
-                message: 'An \'error\' is a deviation from accuracy or correctness.',
-                type: 'error',
-                duration: 4000
-            })
-        }
 
     </script>
 </body>

@@ -1,0 +1,129 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+   margin-bottom: 25px;
+}
+/* Logo */
+.nav-bar .menu-logo{
+    width: 10%;
+    height: 100%;
+    perspective: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.nav-bar .menu-logo .logo{
+    width: 50px;
+    height: 50px;
+    position: relative;
+    animation: rotate 5s linear infinite;
+    transform-style: preserve-3d;
+}
+
+.menu-logo .logo .face{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(32, 173, 14);
+    box-shadow: 0 0 10px 10px rgb(23, 207, 198) inset;
+    opacity: 0.8;
+}
+@keyframes rotate {
+    to{
+        transform: rotateY(360deg);
+    }
+    
+}
+.logo .font{
+    transform: translateZ(25px);
+}
+.logo .back{
+    transform: translateZ(-25px);
+
+}
+.logo .left{
+    transform: rotateY(90deg) translateZ(-25px);
+
+}
+.logo .right{
+    transform: rotateY(-90deg) translateZ(-25px);
+}
+.logo .top{
+    transform: rotateX(-90deg) translateZ(-25px);
+}
+.logo .bottom{
+    transform: rotateX(90deg) translateZ(-25px);
+}
+
+/* Nav bar */
+.header .nav-bar{
+    width: 100%;
+    height: 80px;
+    background-color: rgb(132, 36, 88);
+    position: fixed;
+    z-index: 99999;
+    display: flex;
+    border-radius: 10px;
+}
+.header .nav-bar ul{
+    width: 70%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+}
+.header .nav-bar ul li:hover a{
+ color: red;
+ 
+}
+.nav-bar ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.nav-bar ul li:active a{
+    opacity: 0.7;
+}
+
+.header .nav-bar .btn-register{
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    width: 20%;
+    height: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 80px;
+
+}
+.header .nav-bar .btn-register:hover{
+    color: red;
+}
+/* Banner */
+.header .banner{
+    width: 98%;
+    height: 300px;
+    margin: auto;
+    background-color: aqua;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 80px;
+
+    /* margin-bottom: 10px; */
+    
+}
+.header .banner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
