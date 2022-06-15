@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./CSS/listItem.css">
     <link rel="stylesheet" href="./CSS/register.css">
     <link rel="stylesheet" href="./CSS/header.css">
+    <link rel="stylesheet" href="./CSS/footer.css">
     <title>PracticeJS</title>
 </head>
 
@@ -44,6 +45,7 @@
         </div> -->
         <div class="header">
             <div class="nav-bar">
+                <!-- Logo -->
                 <div class="menu-logo">
                     <div class="logo">
                         <div class="face font"></div>
@@ -54,17 +56,36 @@
                         <div class="face bottom"></div>
                     </div>
                 </div>
+                <!-- Navbar content -->
                 <ul>
                     <li> <a href="#home">Home</a></li>
                     <li> <a href="#about">About</a></li>
                     <li> <a href="#">Contact</a></li>
                     <li> <a href="#list-course">Course</a></li>
                 </ul>
-                <div class="btn-register">
-                    Register
+                <div class="btn-control">
+
+                    <div class="information">
+                        <p>tungpmshe130687</p>
+                    </div>
+
+                    <div class="btn-register">
+                        Register
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+
+                    <div class="log-in">
+                        Log-in
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                    </div>
+
+                    <div class="logout">
+                        Log-out
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </div>
                 </div>
             </div>
-            <div class="banner">
+            <div class="banner" onclick="changeImage()">
                 <img src="./Asset/image/banner.jpg" alt="Banner" title="Banner">
             </div>
         </div>
@@ -157,8 +178,8 @@
 
             </div>
 
-            <!-- Register -->
 
+            <!-- Register -->
             <div class="register-blur"></div>
             <div class="register_container">
                 <div class="form-close">
@@ -237,12 +258,75 @@
 
                     <button class="form-submit">Register</button>
                 </form>
-
-
+            </div>
+            <div class="confirm-box">
+                <div class="heading-message">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <div class="content-message">
+                    <p>Sign Up Success</p>
+                    <div class="btn-ok">
+                        OK
+                    </div>
+                </div>
             </div>
         </div>
 
+        <!-- Footer -->
 
+        <div class="footer">
+            <div class="footer-container">
+                <div class="footer-des">
+                    <div class="footer-des-item">
+                        <h2>Contact Us</h2>
+                        <p>PhoneNumber: 0388811398</p>
+                        <p>Email: tungpmshe130687@gmail.com</p>
+                        <p>Address: Giao Thuy - Nam Dinh</p>
+                    </div>
+
+                    <div class="footer-des-item">
+                        <h2>Follow Us</h2>
+                        <div class="icon">
+
+                            <a href="https://www.facebook.com/phu.du.581187/" target="_blank">
+                                <i class="fa-brands fa-facebook"></i>
+                                Facebook
+                            </a>
+                            <a href="#">
+                                <i class="fa-brands fa-instagram-square"></i>
+                                Instagram
+                            </a>
+                            <a href="#">
+                                <i class="fa-brands fa-twitter"></i>
+                                Twitter
+                            </a>
+                            <a href="#">
+                                <i class="fa-brands fa-youtube"></i>
+                                Youtube
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="footer-des-item">
+                        <h2>Support</h2>
+                        <p>Contact</p>
+                        <p>Security</p>
+                        <p>Terms</p>
+                    </div>
+
+                    <div class="footer-des-item">
+                        <h2>About</h2>
+                        <p>Introduction</p>
+                        <p>Partner</p>
+                        <p>job opportunities</p>
+                    </div>
+                </div>
+                <div class="footer-icon">
+                    <h2>© 2021 - 2022. All rights reserved.</h2>
+                </div>
+            </div>
+
+        </div>
     </div>
 
     </div>
@@ -251,6 +335,7 @@
     <script src="./toastMessage.js"></script>
     <script src="./listItem.js"></script>
     <script src="./register.js"></script>
+    <script src="./banner.js"></script>
     <script>
         // const btn_success = document.querySelector('.btn-succses');
         // const btn_info = document.querySelector('.btn-info');
@@ -300,25 +385,76 @@
         //     })
         // }
 
+
         const registerBtn = document.querySelector('.nav-bar .btn-register');
+        const confirmBtn = document.querySelector('.confirm-box .content-message .btn-ok');
+        const loginBtn = document.querySelector('.nav-bar .btn-control .log-in');
+        const logoutBtn = document.querySelector('.nav-bar .btn-control .logout');
+
         const registerBlur = document.querySelector('.container-content .register-blur');
         const registerElement = document.querySelector('.container-content .register_container');
         const formCloseBtn = document.querySelector('.register_container .form-close');
-        console.log(formCloseBtn);
+        const confirmboxElement = document.querySelector('.container-content .confirm-box');
+        const informationElement = document.querySelector('.header .btn-control .information');
 
+        // console.log(informationElement);
+
+        // Xử lý các button control
         registerBtn.onclick = function () {
             registerBlur.classList.add('active');
             registerElement.classList.add('active');
+
+            Array.from($$('.form-group .input-form.active')).forEach(function (element) {
+                element.classList.remove('active');
+            });
+
+
+            $('.register_container #fullname').value = '';
+            $('.register_container #email').value = '';
+            $('.register_container #phonenumber').value = '';
+            $('.register_container #password').value = '';
+            $('.register_container #repassword').value = '';
+
+            if ($('input[name="gender"]:checked')) {
+                $('input[name="gender"]:checked').checked = false;
+                // console.log('fuck')
+            };
         }
+
         formCloseBtn.onclick = function () {
             registerBlur.classList.remove('active');
             registerElement.classList.remove('active');
         }
 
+        confirmBtn.onclick = function () {
+            registerBlur.classList.remove('active', 'blur-confirmbox');
+            registerElement.classList.remove('active');
+            confirmboxElement.classList.remove('active');
+            informationElement.classList.add('valid');
+            registerBtn.classList.add('invalid');
+            loginBtn.classList.add('invalid');
+            logoutBtn.classList.add('valid');
 
+            informationElement.innerText = account['fullname'];
+
+            // console.log(account.fullname);
+
+        }
+
+        logoutBtn.onclick = function () {
+            informationElement.classList.remove('valid');
+            registerBtn.classList.remove('invalid');
+            loginBtn.classList.remove('invalid');
+            logoutBtn.classList.remove('valid');
+
+        }
+
+        var accountName = 'Guest123';
+        var account = {};
         validator({
             form: '#form-register',
             formGroup: '.form-group',
+            inputForm: '.input-form',
             message: '.form-message',
             rules: [
                 validator.isRequired('#fullname', 'Not empty'),
@@ -335,8 +471,10 @@
                 }, 'Re-password incorrect')
             ],
             onSubmit: function (data) {
-                // Call API
-                console.log(data);
+                registerBlur.classList.add('blur-confirmbox');
+                confirmboxElement.classList.add('active');
+
+                account = { ...data };
             }
         });
 

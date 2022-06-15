@@ -2,7 +2,7 @@
 function validator (option) {
     var rulesSelector = {};
     const formElement = document.querySelector(option.form);
-    const registerContainer = formElement.parentElement
+    // const registerContainer = formElement.parentElement
 
     function validate(inputElement, rule){
         var messageElement = inputElement.closest(option.formGroup).querySelector(option.message);
@@ -28,12 +28,12 @@ function validator (option) {
         if(messageError){
             messageElement.innerText = messageError;
             inputElement.closest(option.formGroup).classList.add('invalid');
-            inputElement.parentElement.classList.remove('active');
+            inputElement.closest(option.inputForm).classList.remove('active');
         }
         else{
             messageElement.innerText = '';
             inputElement.closest(option.formGroup).classList.remove('invalid');
-            inputElement.parentElement.classList.add('active');
+            inputElement.closest(option.inputForm).classList.add('active');
         }
         // messageError Undefined thì trả về False còn có Content thì return True
         return !!messageError; 
@@ -69,7 +69,7 @@ function validator (option) {
                 },{});
 
                 option.onSubmit(formValues);
-                registerContainer.classList.remove('active');
+                // registerContainer.classList.remove('active');
 
                 }
                 //Trường hợp SUbmit với hành vi mặc định của thẻ Form // k co call back onSubmit

@@ -4,15 +4,12 @@
     width: 100vw;
     height: 100vh;
     background-color: rgb(25, 24, 24);
-    z-index: 99999;
     top: 0;
     left: 0;
     opacity: 0.5;
     display: none;
 }
-.container-content .active{
-    display: inline-block;
-}
+
 .container-content .register_container{
     display: flex;
     position: fixed;
@@ -27,8 +24,15 @@
     display: none;
 }
 
+.container-content .register-blur.active{
+    display: inline-block;
+    z-index: 99999;
+}
+.container-content .register-blur.active.blur-confirmbox{
+    z-index: 9999999;
+}
 .container-content .register_container.active{
-    display: block;
+    display: inline-block;
 }
 .container-content .register_container .form-close{
     position: absolute;
@@ -147,3 +151,70 @@
 .form .form-submit:active{
     opacity: 0.6;
 }
+
+/* Confirm box */
+
+.container-content .confirm-box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 280px;
+    height: 350px;
+    border-radius: 5px;
+    z-index: 9999999;
+    overflow: hidden;
+    box-shadow: 0 0 5px greenyellow;
+    display: none;
+
+}
+.container-content .confirm-box.active{
+    display: inline-block;
+}
+.confirm-box .heading-message{
+    width: 100%;
+    height: 50%;
+    background-color: #2dd284;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #000000;
+}
+.confirm-box .heading-message i{
+    font-size: 60px;
+    color: #ffffff;
+}
+.confirm-box .content-message{
+    width: 100%;
+    height: 50%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.confirm-box .content-message p{
+    font-size: 24px;
+    color: green;
+    margin-bottom: 55px;
+}
+.confirm-box .content-message .btn-ok{
+    border: 1px solid;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 35px;
+    font-weight: 800;
+    background-color: aquamarine;
+    box-shadow: 0 0 5px rebeccapurple;
+}
+
+.confirm-box .content-message .btn-ok:hover{
+    opacity: .8;
+}
+.confirm-box .content-message .btn-ok:active{
+    opacity: .5;
+}
+
+/* .container-content .register-blur */

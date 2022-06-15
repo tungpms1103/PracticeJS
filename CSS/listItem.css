@@ -41,8 +41,8 @@
     width: 100%;
     height: 180px;
     border-radius: 15px;
-    opacity: 0.5;
-    background-color: rgb(60, 65, 70);
+    opacity: 0.6;
+    background-color: rgb(54, 63, 71);
     display: none;
 }
 .course .wrapper .btn-learn{
@@ -52,10 +52,14 @@
     transform: translate(-50%,150%);
     width: 140px;
     height: 40px;
-    background-color: aqua;
+    background-color: #ffffff;
     border-radius: 40px;
+    box-shadow: 0 0 10px rgb(241, 241, 7);
     transition: all .3s linear;
     opacity: 0;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
 
 }
 
@@ -94,13 +98,18 @@
     color: green;
 }
 .course .waiting p span, .course .waiting p i {
-    color: rgb(0, 55, 255);
+    color: rgb(238, 102, 11);
 }
-
+.course .learning p span, .course .learning p i {
+    color: rgb(0, 102, 255);
+}
 .course .description i {
     display: none;
 }
 .course .done .status-done{
+    display: inline-block;
+}
+.course .learning .status-learning{
     display: inline-block;
 }
 .course .waiting .status-waiting{
